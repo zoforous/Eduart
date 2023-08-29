@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Slider -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!--whatsapp-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Title bar LOGO-->
+    <link rel="icon" href="logo1.png" type="image/gif/png">
+</head>
+
+<body>
+
+    <!-- Button trigger modal
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+    </button> -->
+
+
+
+    <div class="loader">
+        <div></div>
+    </div>
+
+
+    <div class="content">
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Registration Form</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form action="indux.php" method="post">
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Candidate Name</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name"
+                                    name="cname">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Guardian's Name</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name"
+                                    name="gname">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Phone no.</label>
+                                <input type="number" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Number" name="cno">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Guardian's Phone no.</label>
+                                <input type="number" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Number" name="gcno">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="name@gmail.com" name="mail">
+                            </div>
+                            <div class="mb-3">
+                                <label for="validationCustom04" class="form-label">State</label>
+                                <select class="form-select" id="validationCustom04" required name="state">
+                                    <option selected disabled value="">Choose a State</option>
+                                    <option>Andhra Pradesh</option>
+                                    <option>Arunachal Pradesh</option>
+                                    <option>Assam</option>
+                                    <option>Bihar</option>
+                                    <option>Chhattisgarh</option>
+                                    <option>Goa</option>
+                                    <option>Gujarat</option>
+                                    <option>Haryana</option>
+                                    <option>Himachal Pradesh</option>
+                                    <option>Jharkhand</option>
+                                    <option>Karnataka</option>
+                                    <option>Kerala</option>
+                                    <option>Madhya Pradesh</option>
+                                    <option>Maharashtra</option>
+                                    <option>Manipur</option>
+                                    <option>Meghalaya</option>
+                                    <option>Mizoram</option>
+                                    <option>Nagaland</option>
+                                    <option>Odisha</option>
+                                    <option>Punjab</option>
+                                    <option>Rajasthan</option>
+                                    <option>Sikkim</option>
+                                    <option>Tamil Nadu</option>
+                                    <option>Telangana</option>
+                                    <option>Tripura</option>
+                                    <option>Uttar Pradesh</option>
+                                    <option>Uttarakhand</option>
+                                    <option>West Bengal</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a valid state.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Course</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name"
+                                    name="course">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Last
+                                    Qualification(s)</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                    name="laq"></textarea>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            <input type="submit" name="add_name" class="btn btn-primary"></input>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Hamburger -->
+        <div id="hamburger">
+            <div id="wrapper">
+                <span class="icon-bar" id="one"></span>
+                <span class="icon-bar" id="two"></span>
+                <span class="icon-bar" id="thr"></span>
+            </div>
+        </div>
+
+        <a class="nav" href="tel:9091150797" id="settings">
+            <i class="fa fa-phone"></i>
+        </a>
+
+        <a class="nav" href="https://wa.me/+918927614476" target="_blank" id="thumb">
+            <i class="fa fa-whatsapp"></i>
+        </a>
+
+
+        <!-- topbar -->
+        <div class="bar1">
+            <div class="content1">
+                <a href='#' data-bs-toggle="modal" data-bs-target="#exampleModal">Admission Open MBBS, B.SC Nursing,
+                    P.B.
+                    B.SC
+                    Nursing, M.SC Nursing, Para Medical, D Pharmacy, B Pharmacy, B.TECH, MBA,
+                    B.ED, D.ED, D.EL.ED, LLB, PH.D
+                    <br> Apply Now</a>
+            </div>
+        </div>
+
+        <!-- Heading -->
+        <div class="headstyle">
+            <div class="heading">
+                <img src="./logo.jpg" class="widthlogo" alt="logo">
+                <span class="text1">EduArt Education Services</span>
+
+            </div>
+        </div>
+        
+        <!-- navbar2 -->
+        <nav>
+            <div class='bar2'>
+                <ul class='content2'>
+                    <li data-bs-toggle="modal" data-bs-target="#exampleModal">COURSES</li>
+                    <li data-bs-toggle="modal" data-bs-target="#exampleModal">COLLEGES</li>
+                    <li data-bs-toggle="modal" data-bs-target="#exampleModal">UNIVERSITY</li>
+                    <li data-bs-toggle="modal" data-bs-target="#exampleModal">NEWS</li>
+                    <li data-bs-toggle="modal" data-bs-target="#exampleModal">DISTANCE</li>
+                    <li data-bs-toggle="modal" data-bs-target="#exampleModal">EDUCATION</li>
+                    <li data-bs-toggle="modal" data-bs-target="#exampleModal">TEST PAPER</li>
+                    <li data-bs-toggle="modal" data-bs-target="#exampleModal">SYLLABUS</li>
+                    <li data-bs-toggle="modal" data-bs-target="#exampleModal">APPLY FRANCHISE</li>
+                </ul>
+            </div>
+    
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="berger__bar" onclick="myFunction()">
+                    <div class="berger">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <div class="sidebar__contents" id="sidebar__contents" style="display: none;">
+                    <ul>
+                        <li data-bs-toggle="modal" data-bs-target="#exampleModal">COURSES</li>
+                        <li data-bs-toggle="modal" data-bs-target="#exampleModal">COLLEGES</li>
+                        <li data-bs-toggle="modal" data-bs-target="#exampleModal">UNIVERSITY</li>
+                        <li data-bs-toggle="modal" data-bs-target="#exampleModal">NEWS</li>
+                        <li data-bs-toggle="modal" data-bs-target="#exampleModal">DISTANCE</li>
+                        <li data-bs-toggle="modal" data-bs-target="#exampleModal">EDUCATION</li>
+                        <li data-bs-toggle="modal" data-bs-target="#exampleModal">TEST PAPER</li>
+                        <li data-bs-toggle="modal" data-bs-target="#exampleModal">SYLLABUS</li>
+                        <li data-bs-toggle="modal" data-bs-target="#exampleModal">APPLY FRANCHISE</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar2 -->
+
+        <div class="bar3">
+            <marquee>Nursing | MBBS | Pramedical Course | Pharmacy | PH.D | B.Tech | MBA Admission</marquee>
+        </div>
+
+        <!-- Slideshow Banner -->
+        <div class="slideshow-container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./Banner/img1.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./Banner/img2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./Banner/img3.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./Banner/img4.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./Banner/img5.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Sparkling Box -->
+        <div class="container9">
+            <div class="flex no-wrap">
+                <div class="col bg1 main-div main-div2" data-bs-toggle="modal" data-bs-target="#exampleModal">MBBS</div>
+                <div class="col bg2 main-div main-div2" data-bs-toggle="modal" data-bs-target="#exampleModal">Bds</div>
+                <div class="col bg3 main-div main-div2" data-bs-toggle="modal" data-bs-target="#exampleModal">BSc
+                    nursing</div>
+            </div>
+            <div class="flex no-wrap">
+                <div class="col bg4 main-div main-div2" data-bs-toggle="modal" data-bs-target="#exampleModal">Gnm
+                    Nursing</div>
+                <div class="col bg5 main-div main-div2" data-bs-toggle="modal" data-bs-target="#exampleModal">Para
+                    Medical</div>
+                <div class="col bg6 main-div main-div2" data-bs-toggle="modal" data-bs-target="#exampleModal">B Pharmacy
+                </div>
+            </div>
+            <div class="flex no-wrap">
+                <div class="col bg7 main-div main-div2" data-bs-toggle="modal" data-bs-target="#exampleModal">D Pharmacy
+                </div>
+                <div class="col bg7 main-div main-div2" data-bs-toggle="modal" data-bs-target="#exampleModal">BHMS</div>
+                <div class="col bg7 main-div main-div2" data-bs-toggle="modal" data-bs-target="#exampleModal">BAMS</div>
+            </div>
+        </div>
+
+        <!-- Colleges List -->
+        <div class="container1">
+            <div class="container2">
+                <div class="tab" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="logo">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    MBBS Colleges in india
+                </div>
+                <div class="tab" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="logo">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    BDS Colleges in india
+                </div>
+                <div class="tab" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="logo">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    Bsc nursing
+                </div>
+                <div class="tab" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="logo">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    Gnm
+                </div>
+                <div class="tab" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="logo">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    Bpharmacy Colleges in india
+                </div>
+                <div class="tab" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="logo">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    Dpharm Colleges in india
+                </div>
+                <div class="tab" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="logo">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    BAMS Colleges in india
+                </div>
+                <div class="tab" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="logo">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    BHMS Colleges in india
+                </div>
+                <div class="tab" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="logo">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    CCT Colleges in india
+                </div>
+                <div class="tab" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="logo">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    DMLT Colleges in india
+                </div>
+                <div class="tab" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="logo">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    BMLT Colleges in india
+                </div>
+                <div class="tab" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="logo">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    B.Sc.(X-Ray) Colleges in india
+                </div>
+                <div class="tab" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="logo">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    B.Tech Colleges in india
+                </div>
+                <div class="tab" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="logo">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    B.Ed. Colleges in india
+                </div>
+                <div class="tab" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="logo">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    DL.Ed Colleges in india
+                </div>
+                <div class="tab" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="logo">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    D.Ed Colleges in india
+                </div>
+                <div class="tab" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="logo">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    L.L.B Colleges in india
+                </div>
+                <div class="tab" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="logo">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    BSC LLB Colleges in india
+                </div>
+                <div class="tab" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="logo">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    BBA Colleges in india
+                </div>
+                <div class="tab" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="logo">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    B.C.A. Colleges in india
+                </div>
+                <div class="tab" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="logo">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    M.C.A. Colleges in india
+                </div>
+                <div class="tab" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="logo">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    MBA Colleges in india
+                </div>
+                <div class="tab" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="logo">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    Ph.D Colleges in india
+                </div>
+                <div class="tab" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="logo">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    LLM Colleges in india
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Banner -->
+        <div class="bar4">
+            <marquee>M.PHIL - PH.D Full Time Part Time All Subject Admission Open Apply Now</marquee>
+        </div>
+
+        <!-- Top Courses -->
+        <div class="container4">
+            <h1 class="heading-white"><u>TOP COLLEGES</u></h1>
+            <br>
+            <br>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Acting, Dance and Drama
+                Courses</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Agriculture Science and Technology
+                Courses</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Animation/Multimedia</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Architecture</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Civil Aviation Courses</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Commerce Courses</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Computer Courses</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Dental College</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Distance Education</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Education</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Engineering</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Fashion/Textile Design</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Information Technology
+                Courses</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Integrated</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">ITI</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Jewellery Designing Courses</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Language/Art</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Management</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Maritime and Naval Courses</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Mass Communications Courses</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Media/Film/Journalism</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Medical</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Music</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Nursing</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Pharmacy</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Physical Education</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Polities/Law/Humanities</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Professional Courses</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Radio, TV and Film Production
+                Courses</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Research Programmes</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Science & Technology</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Social Work</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Traditional Colleges</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Travel/Hospitality</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Veterinary</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Vocational Courses</span>
+            <span class="tpcrs" data-bs-toggle="modal" data-bs-target="#exampleModal">Yoga and Naturopathy
+                Courses</span>
+        </div>
+
+        <!-- Contact Us -->
+        <div class="container8">
+            <h1 class="heading-white"><u>CONTACT US</u></h1>
+            <br>
+            <div class="container7">
+
+
+                <div class="container6 baseline">
+                    <div>ABOUT US</div>
+                    <br>
+                    <div>
+                        In this website you will get all the educational blogs, study material for entrance exam ( GNM &
+                        ANM,
+                        JENPAS-UG, Paramedical, JEXPO & VOCLET, WBJEE ) & West Bengal Board Exam ( WBBSE & WBCHSE ). We
+                        also
+                        provides the various jobs updates & preparation study materials. You can also attempt our free
+                        Mock
+                        Test
+                        to
+                        make your preparation level batter. We also provides various scholarship updates .
+                        <br>
+                        <br>
+                        ADDRESS :
+                        <br>
+                        C-55 Moulana Azad Sarani, City Centre, Durgapur, Pin: 713216
+                    </div>
+                </div>
+                <div class="container6">
+
+                    <br>
+                    <br>
+                    <div>
+                        <a href="https://www.facebook.com/Edu-art-guru-103575381181992/" target="_blank"
+                            class="clogo"><i class="fa-brands fa-facebook-square"></i></a>
+                        <a class="clogo"><i class="fa fa-instagram"></i></a>
+                        <a class="clogo"><i class="fa fa-twitter"></i></a>
+                        <a href="mailto:eduart@eduarteducationservices.com" target="_blank" class="clogo"><i
+                                class="fa-solid fa-envelope"></i></a>
+                        <a class="clogo"><i class="fa-brands fa-linkedin"></i></a>
+                        <a class="clogo"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://maps.app.goo.gl/tSmUFxe18AGRXdV3A" target="_blank" class="clogo"><i
+                                class="fa-solid fa-location-pin"></i></i></a>
+                        <a href="https://youtube.com/channel/UC7L5bgZni2RYiGRabT7zAwQ" target="_blank" class="clogo"><i
+                                class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <br>
+                    <br>
+                    <div>
+                        This website is created by <a href="https://www.linkedin.com/in/amarjit-khan-0b6985233/"
+                            target="_blank" class="dlogo zoom"><b>Amarjit</b></a> and <a
+                            href="https://www.linkedin.com/in/suman-bhattacharjee-151746204/" target="_blank"
+                            class="dlogo zoom"><b>Suman</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sticky footer -->
+        <div class="blockbottom">
+            <div class="container5">
+                <p>ADMISSION HELPLINE NUMBER - <a href="tel:7478783270"
+                        style="color: white; text-decoration: none;"><b>+917478783270</b></a>,&nbsp;<a
+                        href="tel:9091150797" style="color: white; text-decoration: none;"><b>+919091150797</b></p>
+            </div>
+        </div>
+
+        <!-- <a href="tel:9091150797" class="float">
+            <i class="fa fa-phone my-float"></i>
+        </a>
+        <a href="https://wa.me/+919883731388" target="_blank" class="float" style="bottom: 142px; font-size: 19px;">
+            <i class="fa fa-whatsapp my-float"></i> -->
+        </a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="application/javascript">
+
+        //navbar hamburger
+        berger = document.querySelector('.berger')
+        bar = document.querySelector('.bar2')
+        content = document.querySelector('.content2')
+
+        berger.addEventListener('click', () => {
+            content.classList.toggle('v-class');
+        })
+
+
+        //Slideshow Banner
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            effect: "fade",
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            grabCursor: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+
+        //preloader
+        $(window).on('load', function () {
+            $(".loader").fadeOut(1000);
+            $(".content").fadeIn(1000);
+        });
+
+
+        //hamburger floating
+        $('#hamburger').click(function () {
+            $('#hamburger').toggleClass('show');
+            // $('#overlay').toggleClass('show');
+            $('.nav').toggleClass('show');
+        });
+
+        //Navbar toggle
+        function myFunction() {
+            berger = document.querySelector('.berger')
+            sidebar__contents = document.querySelector('.sidebar__contents')
+
+            // berger.addEventListener('click', () => {
+            if (document.getElementById("sidebar__contents").style.display == "none") {
+                document.getElementById("sidebar__contents").style.display = "block";
+                console.log("Entered if");
+            } else {
+                document.getElementById("sidebar__contents").style.display = "none";
+                console.log("Entered else");
+            }
+            console.log("clicked");
+        }
+    </script>
+
+    <!-- icons provider -->
+    <script src="https://kit.fontawesome.com/7f8f916295.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
